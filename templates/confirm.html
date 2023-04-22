@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Message Upload</title>
+</head>
+<body>
+    <h1>Confirm Message Upload</h1>
+    <p>Are you sure you want to upload the following message?</p>
+    <p>{{ message }}</p>
+    <form method="post" action="/confirm">
+        <input type="hidden" name="message" value="{{ message }}">
+        <button type="submit">Yes, upload</button>
+        <button type="button" onclick="window.history.back()">No, cancel</button>
+    </form>
+</body>
+</html>
