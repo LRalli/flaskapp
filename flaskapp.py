@@ -48,7 +48,7 @@ def create_message_file():
 @app.route('/confirm', methods=['POST'])
 def confirm_message_file():
     message = request.form.get('message')
-    with open('message.txt', 'w') as file:
+    with open('/var/www/html/flaskapp/message.txt', 'w') as file:
             file.write(message)
     return send_file('message.txt', as_attachment=True)
 
