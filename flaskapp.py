@@ -48,11 +48,8 @@ def create_message_file():
 @app.route('/confirm', methods=['POST'])
 def confirm_message_file():
     message = request.form.get('message')
-    try:
-        with open('message.txt', 'w') as file:
+    with open('message.txt', 'w') as file:
             file.write(message)
-        return send_file('message.txt', as_attachment=True)
-    except Exception as e:
-        flash(f'Error creating file: {str(e)}')
-        return redirect(url_for('index'))
+    return send_file('message.txt', as_attachment=True)
+
 		
