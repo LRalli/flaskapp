@@ -1,3 +1,3 @@
 import sys 
-sys.path.insert(0, '/var/www/html/flaskapp')
-from flaskapp import routes.py as application
+sys.path.insert(0, '/var/www/html/ETHserver')
+from ETHserver import routes.py as application
