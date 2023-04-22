@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Malware Martini</title>
+    <link rel="stylesheet" href="/static/assets/css/member.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+
+
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Malware Martini</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/team">Executive Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contacts">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="InfoMember">
+      {% if name=="Jason" %}
+        <img src="/static/assets/img/JasonSins.png" width="500px">
+      <div id="text">
+        <h1>Jason Sins</h1>
+        <h2>SOC manager</h2>
+        <br>
+        <p>As the Security Operations Centre (SOC) Manager, Jason plans, 
+          directs and controls the SOC functions and operations. <br><br>
+
+          He also has other duties such as ensuring the monitoring and analysis of incidents to protect people, 
+          technology and processes by addressing all security incidents and ensuring timely escalation, 
+          directing the Cyber Intelligence capability to identify potential threats, delivering strategic 
+          reports and strategizing to minimise the impact of the threat.</p>
+      </div>
+
+      {% elif name=="Jackson" %}
+      <img src="/static/assets/img/JacksonLee.png" width="500px">
+      <div id="text">
+        <h1>Jackson Lee</h1>
+        <h2>Advanced security analyst</h2>
+        <br>
+        <p>Jackson activities range from identification of previously unknown vulnerabilities 
+          to assessment of efficiency of present cybersecurity tools with the goal of making 
+          justified recommendations as to the changes to products, tools, and processes used in the SOC.
+          <br><br>
+          He also conducts vulnerability assessments and penetration tests, 
+          review industry news and threat intelligence to identify new vulnerabilities, close security gaps, 
+          and make the SOC team more efficient in general.</p>
+      </div>
+
+      {% elif name=="Matthew" %}
+      <img src="/static/assets/img/MatthewPark.png" width="500px">
+      <div id="text">
+        <h1>Matthew Park</h1>
+        <h2>Security investigator</h2>
+        <br>
+        <p>Using sophisticated allies, such as threat intelligence, 
+          Matthew's job is to identify affected hosts and devices and then evaluate 
+          running and terminated processes. This usually also involves deeper investigation to identify 
+          sources of attack, lateral movement analysis, methodologies used and duration of residence of 
+          the attack vector in the environment. <br><br>He is also 
+          responsible for crafting and deploying mitigation and eradication strategies.</p>
+      </div>
+
+      {% elif name=="Lawrence" %}
+      <img src="/static/assets/img/Lawrence.png" width="500px">
+      <div id="text">
+        <h1>Lawrence Smith</h1>
+        <h2>Penetration Tester</h2>
+        <br>
+        <p>As a penetration tester, Lawrence seeks out flaws and weaknesses in active systems. 
+          His penetration testing team simulate cyberattacks and other security breaches designed 
+          to access sensitive, private, or proprietary information. They utilize existing hacking 
+          tools and strategies and devise their own.</p>
+      </div>
+
+      {% elif name=="Bob" %}
+      <img src="/static/assets/img/BobJohnson.png" width="500px">
+      <div id="text">
+        <h1>Bob Johnson</h1>
+        <h2>Red Team Engineer</h2>
+        <br>
+        <p>As a Red Team Engineer, Bob is responsible for the delivery of continuous assessments to ensure the 
+          quality and security of our platform, as well as help identify new Red Team Operations and 
+          collaborate closely with defensive and infrastructure teams</p>
+      </div>
+
+      {% elif name=="Mia" %}
+      <img src="/static/assets/img/MiaGarcia.png" width="500px">
+      <div id="text">
+        <h1>Mia Garcia</h1>
+        <h2>Director of Threat Management</h2>
+        <br>
+        <p>Mia oversees the supervision of red team personnel, 
+          which includes work allocation, training, promotion, 
+          enforcement of internal procedures and controls, and problem resolution; <br><br>
+          She also evaluates peak performance and makes recommendations for personnel actions; She
+          motivates employees to achieve peak productivity and performance.</p>
+      </div>
+
+      {% elif name=="Jonathan" %}
+      <img src="/static/assets/img/JPork.jpg" width="500px">
+      <div id="text">
+        <h1>Jonathan Pork</h1>
+        <h2>CEO</h2>
+        <br>
+        <p>Jonathan Pork is the Chair and Chief Executive Officer of Malware Martini. He assumed the role of CEO on 
+          July 26, 2015 and was elected Chair of the Board on December 11, 2017. <br> <br>
+
+          As Chair and CEO, he is focused on helping companies, cities, and countries around the world 
+          as they look to Malware Martini to connect, secure, and automate their organizations for a digital-first 
+          world. <br> <br>
+          
+          Jonathan has served as Senior Vice President of Worldwide Field Operations, where he led the Worldwide Sales and Partner Organizations, 
+          and helped drive and execute many of the company largest investment areas and strategy shifts; 
+          Senior Vice President of The Americas, Ciscos largest geographic region; Senior Vice 
+          President of U.S. Enterprise, Commercial and Canada; Senior Vice President of U.S. 
+          Commercial Sales; and Segment Vice President, U.S. and Canada channel organization, 
+          where he was instrumental in helping build the industrs most powerful partner program.</p>
+      </div>
+
+      {% elif name=="William" %}
+      <img src="/static/assets/img/WilliamHarrison.png" width="500px">
+      <div id="text">
+        <h1>William Harrison</h1>
+        <h2>Webmaster</h2>
+        <br>
+        <p>As the Webmaster, William serves as the primary contact for all aspects of the organizations 
+          website(s), handling a range of responsibilities that may include web design and development, 
+          routine site and content maintenance, and various updates to ensure sites align with the goals 
+          and objectives of the company.</p>
+      </div>
+
+      {% elif name=="Isabella" %}
+      <img src="/static/assets/img/IsabellaSingh.png" width="500px">
+      <div id="text">
+        <h1>Isabella Singh</h1>
+        <h2>CFO</h2>
+        <br>
+        <p>As the Chief Finanical Officer, Isabella is responsible for managing the financial actions of the company. 
+          Her duties include tracking cash flow, analyzing strengths and weaknesses 
+          to propose corrective action plans when necessary and preparing accurate forecasts 
+          so that management can make informed decisions about future investments or cuts.</p>
+      </div>
+      {% endif %}
+
+    </div>
+
+    
+
+    <!-- Footer -->
+    <footer id="footer"
+    class="text-center text-white"
+    style="background-color: #343a40">
+    <br />
+    <p>© 2023 Copyright: <a class="text-white" href="#">Malware Martini</a></p>
+  </footer>
+  <!-- Footer -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>

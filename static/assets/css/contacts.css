@@ -1,0 +1,17 @@
+#con{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    padding-left: 10%;
+    padding-bottom: 5%;
+}
+
+#data{
+    font-size: 2vw;
+    margin-top: 20%;
+    padding-right: 5%;
+}
+
+#footer{
+    padding-bottom: 10px;
+ }
