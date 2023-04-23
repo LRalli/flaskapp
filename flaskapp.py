@@ -57,5 +57,5 @@ def confirm_message_file():
 @app.route('/sent', methods=['GET'])
 def confirm_send():
 	with open('/var/www/html/flaskapp/message.txt', 'r') as file:
-		message = file.readlines()
+		message = file.read().splitlines()
 	return render_template('confirm_send.html', message=message)
