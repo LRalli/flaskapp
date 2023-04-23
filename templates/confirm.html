@@ -6,8 +6,10 @@
 <body>
     <h1>Confirm Message Upload</h1>
     <p>Are you sure you want to upload the following message?</p>
+    <p>{{ name }}</p>
     <p>{{ message }}</p>
     <form method="post" action="/confirm">
+        <input type="hidden" name="name" value="{{ name }}"><br>
         <input type="hidden" name="message" value="{{ message }}">
         <button type="submit">Yes, upload</button>
         <button type="button" onclick="window.history.back()">No, cancel</button>

@@ -42,18 +42,20 @@ def member():
 
 @app.route('/message', methods=['POST'])
 def create_message_file():
+    name = request.form.get('name')
     message = request.form.get('message')
-    return render_template('confirm.html', message=message)
+    return render_template('confirm.html', message=message, name=name)
 
 @app.route('/confirm', methods=['POST'])
 def confirm_message_file():
+    name = request.form.get('name')
     message = request.form.get('message')
     with open('/var/www/html/flaskapp/message.txt', 'w') as file:
-        file.write(message)
+        file.write(name + '/n' + message)
     return redirect("/sent")
 
 @app.route('/sent', methods=['GET'])
 def confirm_send():
 	with open('/var/www/html/flaskapp/message.txt', 'r') as file:
-		message = file.read()
+		message = file.readlines()
 	return render_template('confirm_send.html', message=message)

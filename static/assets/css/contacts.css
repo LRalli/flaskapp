@@ -2,14 +2,20 @@
     display: grid;
     grid-template-columns: 50% 50%;
     text-align: center;
-    padding-left: 10%;
+    padding-left: 5%;
     padding-bottom: 5%;
+    margin-top: 3%;
 }
 
 #data{
     font-size: 2vw;
     margin-top: 20%;
     padding-right: 5%;
+}
+
+#form{
+    padding-left: 8%;
+    padding-bottom: 10%;
 }
 
 #footer{

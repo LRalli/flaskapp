@@ -30,19 +30,25 @@
       </div>
     </nav>
 
+    <img src="/static/assets/img/480.jpg" alt="" style="width: 100%;">
+
     <div class="contacts_info" id="con">
-        <img src="/static/assets/img/360_F_302167753_zO96cQJziw0BYKOSw0plniVSlkxdGTC5.jpg" style="width: 500px;">
+        <img src="/static/assets/img/105381-OMRNIP-573.jpg" style="width: 400px;">
         <section id="data">
             <p>Mail: example.com</p>
         </section>
     </div>
 
-    <h1>Upload a Message</h1>
+    <div id="form">
+      <h2>Leave a Message</h2>
     <form method="post" action="/message">
-        <label for="message">Message:</label>
-        <input type="text" name="message" id="message">
+        <label for="name">Full Name:</label><br>
+        <input type="text" name="name" id="name"><br>
+        <label for="message">Message:</label><br>
+        <textarea name="message" id="message" cols="60" rows="5"></textarea><br>
         <button type="submit">Submit</button>
     </form>
+    </div>
     
   <!-- Footer -->
   <footer id="footer"
