@@ -38,12 +38,12 @@
     <form method="post" action="/confirm">
         <input type="hidden" name="name" value="{{ name }}"><br>
         <input type="hidden" name="message" value="{{ message }}">
-        <button type="submit">Yes, upload</button>
-        <button type="button" onclick="window.history.back()">No, cancel</button>
+        <button type="submit" class="btn btn-outline-primary">Yes, upload</button>
+        <button type="button" class="btn btn-outline-primary" onclick="window.history.back()">No, cancel</button>
     </form>
     </div>
 
-     <!-- Footer -->
+<!-- Footer -->
   <footer id="footerconfirm"
   class="text-center text-white"
   style="background-color: #343a40">
