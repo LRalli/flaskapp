@@ -32,8 +32,8 @@
 
     <div id="confirm">
         <h1>Message sent</h1>
-    <p>Congratulation! You successfully sent message:</p>
-    <pre>{{ message }}</pre>
+    <p id="msg">Congratulation! You successfully sent message:</p>
+    <button href="/sent?file={{name}}" onclick="myFunction()">See message</button>
     <button class="btn btn-outline-primary" onclick="location.href='/'">Back to homepage</button>
     </div>
 
@@ -47,4 +47,10 @@
 <!-- Footer -->
 
 </body>
+
+<script> 
+function myFunction(){
+  document.getElementById("msg").innerHTML = {message}
+}
+</script>
 </html>

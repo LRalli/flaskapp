@@ -56,7 +56,7 @@ def confirm_message_file():
     filename = name + ".txt"
     with open(os.path.join(path, filename), 'a+') as file:
         file.write(name + " : " + message + '\t' + " [ " + timestamp + " ] " + '\n')
-    return redirect(url_for('sent', file = filename))
+    return render_template('confirm_send.html', name=name)
 
 @app.route('/sent', methods=['GET'])
 def sent():
@@ -70,4 +70,4 @@ def sent():
 			message = file.read()
 	except FileNotFoundError:
 		abort(404, 'file not found')
-	return render_template('confirm_send.html', message = message)
+	return message
