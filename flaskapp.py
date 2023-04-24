@@ -55,7 +55,7 @@ def confirm_message_file():
     path = "/var/www/html/flaskapp/"
     filename = name
     with open(os.path.join(path, filename + ".txt"), 'a+') as file:
-        file.write(name + " : " + message + ' [' + timestamp + ']' + '\n')
+        file.write(name + " : " + message + " " ' [' + timestamp + ']' + '\n')
     return redirect('/sent?file=' + filename)
 
 @app.route('/sent', methods=['GET'])
@@ -63,5 +63,5 @@ def confirm_send():
 	filename = request.values.get('file')
 	path = "/var/www/html/flaskapp/"
 	with open(os.path.join(path, filename + ".txt"), 'r') as file:
-		message = file.read()
+		message = file.read().readlines()
 	return render_template('confirm_send.html', message=message)
