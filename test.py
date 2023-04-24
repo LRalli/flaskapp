@@ -11,8 +11,8 @@ def confirm_message_file():
 
 @app.route('/sent', methods=['GET'])
 def confirm_send():
-	filename = request.values.get('file')
-	path = request.values.get('path')
+	filename = request.args.get('file')
+	path = request.args.get('path')
 	if not path or not filename:
 		abort(400, 'Missing parameters')
 	try:
