@@ -50,12 +50,15 @@ def create_message_file():
 def confirm_message_file():
     name = request.form.get('name')
     message = request.form.get('message')
-    with open('/var/www/html/flaskapp/message.txt', 'w') as file:
-        file.write(name + ":" + message + '\n')
-    return redirect("/sent")
+    filename = '/var/www/html/flaskapp/message.txt'
+    outname = filename.replace("message", name)
+    with open(outname, 'w') as file:
+        file.write(name + " : " + message + '\n')
+    return redirect("/sent", name=outname)
 
 @app.route('/sent', methods=['GET'])
 def confirm_send():
-	with open('/var/www/html/flaskapp/message.txt', 'r') as file:
+	filename = request.values.get('name')
+	with open(filename, 'r') as file:
 		message = file.read()
 	return render_template('confirm_send.html', message=message)
