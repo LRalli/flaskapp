@@ -56,12 +56,12 @@ def confirm_message_file():
     filename = name
     with open(os.path.join(path, filename + ".txt"), 'a+') as file:
         file.write(name + " : " + message + '\t' + " [ " + timestamp + " ] " + '\n')
-    return redirect(url_for('sent', file = filename, path = path))
+    return redirect(url_for('sent', file = filename))
 
 @app.route('/sent', methods=['GET'])
 def sent():
 	filename = request.args.get('file')
-	path = request.args.get('path')
+	path = "/var/www/html/flaskapp/"
 	if not path or not filename:
 		abort(400, 'Missing parameters')
 	try:
