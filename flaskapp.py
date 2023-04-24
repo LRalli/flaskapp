@@ -59,7 +59,7 @@ def confirm_message_file():
 
 @app.route('/sent', methods=['GET'])
 def confirm_send():
-	path = "/var/www/html/flaskapp"
+	path = "/var/www/html/flaskapp/"
 	with open(os.path.join(path, "message.txt"), 'r') as file:
 		message = file.read()
 	return render_template('confirm_send.html', message=message)
