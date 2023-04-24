@@ -53,8 +53,8 @@ def confirm_message_file():
     message = request.form.get('message')
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     path = "/var/www/html/flaskapp/"
-    filename = name
-    with open(os.path.join(path, filename + ".txt"), 'a+') as file:
+    filename = name + ".txt"
+    with open(os.path.join(path, filename), 'a+') as file:
         file.write(name + " : " + message + '\t' + " [ " + timestamp + " ] " + '\n')
     return redirect(url_for('sent', file = filename))
 
@@ -65,7 +65,7 @@ def sent():
 	if not path or not filename:
 		abort(400, 'Missing parameters')
 	try:
-		file_path = os.path.join(path, filename + ".txt")
+		file_path = os.path.join(path, filename)
 		with open(file_path, 'r') as file:
 			message = file.read()
 	except FileNotFoundError:
