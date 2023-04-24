@@ -59,7 +59,7 @@ def confirm_message_file():
     return redirect(url_for('sent', file = filename, path = path))
 
 @app.route('/sent', methods=['GET'])
-def confirm_send():
+def sent():
 	filename = request.args.get('file')
 	path = request.args.get('path')
 	if not path or not filename:
