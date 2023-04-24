@@ -63,5 +63,5 @@ def confirm_send():
 	filename = request.values.get('file')
 	path = "/var/www/html/flaskapp/"
 	with open(os.path.join(path, filename + ".txt"), 'r') as file:
-		message = file.read().readlines()
+		message = file.read()
 	return render_template('confirm_send.html', message=message)
