@@ -65,7 +65,7 @@ def sent():
 	if not path or not filename:
 		abort(400, 'Missing parameters')
 	try:
-		file_path = os.path.join(path, filename)
+		file_path = os.path.join(path, filename + ".txt")
 		with open(file_path, 'r') as file:
 			message = file.read()
 	except FileNotFoundError:
