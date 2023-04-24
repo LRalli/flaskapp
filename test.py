@@ -16,7 +16,7 @@ def confirm_send():
 	if not path or not filename:
 		abort(400, 'Missing parameters')
 	try:
-		file_path = os.path.join(path, filename + ".txt")
+		file_path = os.path.join(path, filename)
 		with open(file_path, 'r') as file:
 			message = file.read()
 	except FileNotFoundError:
