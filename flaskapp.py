@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, render_template_string, redirect, url_for, abort
+from flask import Flask, render_template, request, render_template_string, redirect
 import os
 from datetime import datetime
 
@@ -56,34 +56,12 @@ def confirm_message_file():
     filename = name
     with open(os.path.join(path, filename + ".txt"), 'a+') as file:
         file.write(name + " : " + message + '\t' + " [ " + timestamp + " ] " + '\n')
-    return redirect(url_for('sent', file = filename, path = path))
+    return redirect('/sent?file=' + filename)
 
 @app.route('/sent', methods=['GET'])
 def confirm_send():
 	filename = request.values.get('file')
-	path = request.values.get('path')
-	if not path or not filename:
-		abort(400, 'Missing parameters')
-	try:
-		file_path = os.path.join(path, filename + ".txt")
-		with open(file_path, 'r') as file:
-			message = file.read()
-	except FileNotFoundError:
-		abort(404, 'file not found')
-	return render_template('confirm_send.html', message = message)
-
-
-
-
-
-
-
-
-
-
-
-
-
-	#with open(os.path.join(path, filename + ".txt"), 'r') as file:
-	#	message = file.read()
-	#return render_template('confirm_send.html', message=message)
+	path = "/var/www/html/flaskapp/"
+	with open(os.path.join(path, filename + ".txt"), 'r') as file:
+		message = file.read()
+	return render_template('confirm_send.html', message=message)
