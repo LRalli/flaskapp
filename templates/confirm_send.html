@@ -33,7 +33,7 @@
     <div id="confirm">
         <h1>Message sent</h1>
     <p id="msg">Congratulation! You successfully sent message:</p>
-    <button href="/sent?file={{name}}" onclick="myFunction()">See message</button>
+    <button href="/sent?file={{name}}" onclick="myFunction('{{ message }}')">See message</button>
     <button class="btn btn-outline-primary" onclick="location.href='/'">Back to homepage</button>
     </div>
 
@@ -49,8 +49,8 @@
 </body>
 
 <script> 
-function myFunction(){
-  document.getElementById("msg").innerHTML = {message}
+function myFunction(message){
+  document.getElementById("msg").innerHTML = message
 }
 </script>
 </html>
