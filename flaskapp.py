@@ -52,16 +52,14 @@ def confirm_message_file():
     name = request.form.get('name')
     message = request.form.get('message')
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    path = "C:\\"
-    filename = name
-    with open(os.path.join(path, filename + ".txt"), 'a+') as file:
+    path = "/var/www/html/flaskapp/"
+    with open(os.path.join(path, "message.txt"), 'a+') as file:
         file.write(name + " : " + message + '\t' + " [ " + timestamp + " ] " + '\n')
-    return redirect('/sent?file=' + filename)
+    return redirect('/sent')
 
 @app.route('/sent', methods=['GET'])
 def confirm_send():
-	filename = request.values.get('file')
-	path = "/"
-	with open(os.path.join(path, filename), 'r') as file:
+	path = "/var/www/html/flaskapp"
+	with open(os.path.join(path, "message.txt"), 'r') as file:
 		message = file.read()
 	return render_template('confirm_send.html', message=message)
