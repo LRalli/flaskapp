@@ -51,7 +51,7 @@ def confirm_message_file():
     name = request.form.get('name')
     message = request.form.get('message')
     filename = '/var/www/html/flaskapp/message.txt'
-    outname = filename.replace("message", name)
+    outname = filename.replace('message', name)
     with open(outname, 'w') as file:
         file.write(name + " : " + message + '\n')
     return redirect("/sent", name=outname)
