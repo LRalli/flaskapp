@@ -51,11 +51,11 @@ def confirm_message_file():
     name = request.form.get('name')
     message = request.form.get('message')
     with open('/var/www/html/flaskapp/message.txt', 'w') as file:
-        file.write(name + "/n" + message)
+        file.write(name + ":" + message)
     return redirect("/sent")
 
 @app.route('/sent', methods=['GET'])
 def confirm_send():
 	with open('/var/www/html/flaskapp/message.txt', 'r') as file:
-		message = file.read().splitlines()
+		message = file.read()
 	return render_template('confirm_send.html', message=message)
