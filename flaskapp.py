@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, render_template_string, redirect, abort, url_for
+from flask import Flask, render_template, request, render_template_string, redirect, abort
 import os
 from datetime import datetime
 
@@ -9,6 +9,14 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'super-secret-key')
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
+BLACKLISTED_URLS = ['/sent']
+WHITELISTED_HEADER = 'X-Secret-Header'
+
+@app.before_request
+def check_blacklist():
+    if request.path in BLACKLISTED_URLS and request.headers.get('X-Requested-With') != 'XMLHttpRequest':
+        return redirect('/')
+    
 # Create a route decorator
 @app.route('/')
 
@@ -56,7 +64,7 @@ def confirm_message_file():
     filename = name + ".txt"
     with open(os.path.join(path, filename), 'a+') as file:
         file.write(name + " : " + message + '\t' + " [ " + timestamp + " ] " + '\n')
-    return render_template('confirm_send.html', name=name)
+    return render_template('confirm_send.html', name=filename)
 
 @app.route('/sent', methods=['GET'])
 def sent():
