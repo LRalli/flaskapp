@@ -8,9 +8,10 @@
 }
 
 #data{
-    font-size: 2vw;
-    margin-top: 20%;
+    font-size: 1.5vw;
+    margin-top: 10%;
     padding-right: 5%;
+    margin-left: -70%;
 }
 
 #form{
@@ -30,6 +31,22 @@
  #footerconfirm{
     padding-bottom: 10px;
     margin-top: 20%;
+ }
+
+ #header2{
+   margin-left: 10%;
+ }
+
+ #twtter{
+    margin-left: -31%;
+ }
+
+ #mail{
+    margin-left: -20%;
+ }
+
+ #tel{
+    margin-left: -33%;
  }
 
  #footerconfirm2{

@@ -12,10 +12,31 @@
     display: inline-block;
     content: "";
     border-top: .2rem solid #343a40;
-    width: 400px;
+    width: 410px;
     margin: -0.5% 1%;
     transform: translateY(-1vw);
   }
+
+ #redt h1::before,
+ #redt h1::after {
+    display: inline-block;
+    content: "";
+    border-top: .2rem solid #343a40;
+    width: 510px;
+    margin: -0.5% 1%;
+    transform: translateY(-1vw);
+  }
+
+  #admint h1::before,
+  #admint h1::after {
+     display: inline-block;
+     content: "";
+     border-top: .2rem solid #343a40;
+     width: 480px;
+     margin: -0.5% 1%;
+     transform: translateY(-1vw);
+   }
+  
   #stafflist {
     display: grid;
     grid-template-columns: 33% 33% 33%;
