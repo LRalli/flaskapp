@@ -3,10 +3,12 @@
     padding-top: 3%;
     padding-bottom: 5%;
   }
+  
   .InfoSite h1 {
     font-size: 2vw;
     text-align: center;
   }
+
   .InfoSite h1::before,
   .InfoSite h1::after {
     display: inline-block;
@@ -17,8 +19,8 @@
     transform: translateY(-1vw);
   }
 
- #redt h1::before,
- #redt h1::after {
+  #redt h1::before,
+  #redt h1::after {
     display: inline-block;
     content: "";
     border-top: .2rem solid #343a40;
@@ -35,7 +37,7 @@
      width: 480px;
      margin: -0.5% 1%;
      transform: translateY(-1vw);
-   }
+  }
   
   #stafflist {
     display: grid;
@@ -43,6 +45,7 @@
     padding-left: 7%;
     padding-top: 2%;
   }
+
   #staff{
     width: 50%;
   }
@@ -52,7 +55,7 @@
     height: 130px;
     background-color: #1a1a1a;
     opacity: 0.8;
-    margin-bottom: -4.5%;
+    margin-bottom: -4.6%;
     margin-left: -15%;
   }
   
@@ -60,10 +63,7 @@
   #picspace{
     position: relative;
   }
-  /**=====================================**/
 
-
-
-#footer{
+  #footer{
     padding-bottom: 10px;
- }
+  }

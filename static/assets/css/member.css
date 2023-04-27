@@ -1,4 +1,4 @@
-#InfoMember{
+ #InfoMember{
     display: grid;
     grid-template-columns: 50% 50%;
     padding-top: 50px;
@@ -6,13 +6,13 @@
     padding-left: 150px;
     padding-right: 150px;
     gap: 20px;
-}
+ }
 
-#error{
+ #error{
     padding-left: 50px;
-}
+ }
 
-#footer{
+ #footer{
     padding-bottom: 10px;
  }
 

@@ -35,8 +35,7 @@
     <div id="confirm">
         <h1>Confirm Message Upload</h1>
     <p>Are you sure you want to upload the following message?</p>
-    <p>{{ name }}</p>
-    <p>{{ message }}</p>
+    <p>{{ name }}: {{ message }}</p>
     <form method="post" action="/confirm">
         <input type="hidden" name="name" value="{{ name }}"><br>
         <input type="hidden" name="message" value="{{ message }}">
@@ -45,14 +44,14 @@
     </form>
     </div>
 
-<!-- Footer -->
+  <!-- Footer -->
   <footer id="footerconfirm"
   class="text-center text-white"
   style="background-color: #343a40">
   <br />
   <p>© 2023 Copyright: <a class="text-white" href="#">Malware Martini</a></p>
-</footer>
-<!-- Footer -->
+  </footer>
+  <!-- Footer -->
 
-</body>
+  </body>
 </html>

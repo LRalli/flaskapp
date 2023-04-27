@@ -1,5 +1,5 @@
 /**=====Carousel Style=====**/
-.carousel-caption {
+  .carousel-caption {
     position: fixed;
     margin-left: -15%;
     margin-bottom: -2%;
@@ -8,62 +8,70 @@
     background-color: #1a1a1a;
     opacity: 0.8;
   }
+
   .d-block {
     max-width: 200%;
     height: 540px;
   }
+
   #S1 {
     padding-top: 25%;
     font-size: 3vw;
     display: inline-block;
     padding-bottom: 1%;
   }
+
   #S2 {
     padding-top: 25%;
     font-size: 3vw;
     display: inline-block;
     padding-bottom: 1%;
   }
+
   #S3 {
     padding-top: 25%;
     font-size: 3vw;
     display: inline-block;
     padding-bottom: 1%;
   }
+
   #captioninfo{
     line-break: strict;
   }
   /**=====Fine Carousel Style=====**/
 
   /**=====Info Box Style=====**/
-.InfoSite {
+  .InfoSite {
   display: grid;
   grid-template-columns: 100%;
   row-gap: 5%;
   padding-top: 3%;
   padding-bottom: 5%;
-}
-.InfoSite h1 {
+  }
+
+  .InfoSite h1 {
   font-size: 2vw;
   text-align: center;
-}
-.InfoSite h1::before,
-.InfoSite h1::after {
+  }
+
+  .InfoSite h1::before,
+  .InfoSite h1::after {
   display: inline-block;
   content: "";
   border-top: .2rem solid #343a40;
   width: 30vw;
   margin: -0.5% 1%;
   transform: translateY(-1vw);
-}
-#InfoP {
+  }
+
+  #InfoP {
   font-size: 1.5vw;
   text-align: center;
   padding-left: 10%;
   padding-right: 10%;
-}
+  }
 /**=====================================**/
 
-#footer{
+  #footer{
    padding-bottom: 10px;
-}
+  }

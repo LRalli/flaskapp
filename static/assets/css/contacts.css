@@ -1,30 +1,30 @@
-#con{
+ #con{
     display: grid;
     grid-template-columns: 50% 50%;
     text-align: center;
     padding-left: 5%;
     padding-bottom: 5%;
     margin-top: 3%;
-}
+ }
 
-#data{
+ #data{
     font-size: 1.5vw;
     margin-top: 10%;
     padding-right: 5%;
     margin-left: -70%;
-}
+ }
 
-#form{
+ #form{
     padding-left: 8%;
     padding-bottom: 5%;
-}
+ }
 
-#confirm{
+ #confirm{
     padding-left: 5%;
     margin-top: 3%;
-}
+ }
 
-#footer{
+ #footer{
     padding-bottom: 10px;
  }
 
