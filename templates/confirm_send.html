@@ -37,7 +37,7 @@
         <h1>Message sent!</h1>
     <p id="msg">Congratulation! You successfully sent message:</p>
 
-    <div id="file-content"></div>
+    <div id="msg-content"></div>
     <button id="view-file-btn" class="btn btn-outline-primary">View File</button>
     <button class="btn btn-outline-primary" onclick="location.href='/'">Back to homepage</button>
     
@@ -64,10 +64,10 @@
       },
       success: function(data) {
         console.log(data)
-        $('#file-content').text(data);
+        $('#msg-content').text(data);
       },
       error: function() {
-        $('#file-content').text('Error fetching file contents.');
+        $('#msg-content').text('Error fetching file contents.');
       }
     });
   });
