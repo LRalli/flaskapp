@@ -75,7 +75,7 @@ def sent():
 	try:
 		file_path = os.path.join(path, filename)
 		with open(file_path, 'r') as file:
-			message = file.read()
+			message = file.readlines()
 	except FileNotFoundError:
 		abort(404, 'file not found')
 	return message
